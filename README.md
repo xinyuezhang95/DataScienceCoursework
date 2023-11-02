@@ -15,6 +15,7 @@ This repository is both a showcase of my skills and a resource for others who ar
 1. [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) (Udemy)
 2. [Python for Finance: Investment Fundamentals & Data Analytics](https://www.udemy.com/course/python-for-finance-investment-fundamentals-data-analytics/) (Udemy)
 3. [Machine Learning and Data Science Zero to Mastery](https://zerotomastery.io/courses/machine-learning-and-data-science-bootcamp/) (Zero To Mastery)
+4. [100 Days of Code -- The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/) (Udemy)
 
 ### Technologies Used
 **Python**: The programming language for all notes and projects.
