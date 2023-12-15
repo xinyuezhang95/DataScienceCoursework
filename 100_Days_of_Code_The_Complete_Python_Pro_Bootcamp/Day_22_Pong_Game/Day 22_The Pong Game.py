@@ -31,10 +31,10 @@ scoreboard = Scoreboard()
 borders = Borders()
 
 screen.listen()
-screen.onkey(key = 'W', fun = l_paddle.up)
-screen.onkey(key = 'S', fun = l_paddle.down)
-screen.onkey(key = 'Up', fun = r_paddle.up)
-screen.onkey(key = 'Down', fun = r_paddle.down)
+screen.onkeypress(key = 'W', fun = l_paddle.up)
+screen.onkeypress(key = 'S', fun = l_paddle.down)
+screen.onkeypress(key = 'Up', fun = r_paddle.up)
+screen.onkeypress(key = 'Down', fun = r_paddle.down)
 
 is_game_on = True
 
