@@ -15,23 +15,6 @@ class QuizInterface:
         self.window.title("Quizzler")
         self.window.config(padx = 20, pady = 20, bg = THEME_COLOR)
         
-        # Ask for user inputs
-        self.amount_label = Label(text = "Number of questions", fg = "white", bg = THEME_COLOR)
-        self.amount_label.grid(row = 0, column = 0)
-        
-        self.amount_input = Entry(width = 30)
-        self.amount_input.grid(row = 0, column = 1)
-        
-        self.category_label = Label(text = "Type of questions", fg = "white", bg = THEME_COLOR)
-        self.category_label.grid(row = 1, column = 0)
-        
-        self.category_input = Entry(width = 30)
-        self.category_input.grid(row = 1, column = 1)
-        self.category_input.focus()
-        
-        self.generate_button = Button(text = "Generate Questions", highlightthickness=0, command=self.generate_questions, width=43)
-        self.generate_button.grid(row=2, column=0, columnspan=2)
-        
         self.score_label = Label(text = "Score: 0", fg = "white", bg = THEME_COLOR)
         self.score_label.grid(row = 3, column = 1)
         
@@ -57,21 +40,11 @@ class QuizInterface:
         self.get_next_question()
         
         self.window.mainloop()
-        
-    def generate_questions(self):
-        global PARAMETERS
-        amount = self.amount_input.get()
-        category = self.category_input.get()
-        PARAMETERS = {
-            "amount": amount,
-            "type": "boolean",
-            "category": category,
-            }
     
     def get_next_question(self):
         self.canvas.config(bg="white")
+        self.score_label.config(text = f"Score: {self.quiz.score}")
         if self.quiz.still_has_questions():
-            self.score_label.config(text = f"Score: {self.quiz.score}")
             q_text = self.quiz.next_question()
             self.canvas.itemconfig(self.question_text, text = q_text)
         else:
